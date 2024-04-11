@@ -1,0 +1,112 @@
+$transition: all .4s ease-in-out;
+
+.gutaccordion {
+	@media screen and (min-width: 375px) {
+		display: grid;
+		grid-template-columns: 50px auto;
+		column-gap: clamp(36px, 4.5vw, 60px);
+	}
+	padding: clamp(16px, 5vw, 60px);
+	background: #FFFFFF;
+
+	&:not(:first-child) {
+		margin-top: 5px;
+	}
+
+
+	&.active {
+		.gutaccordion {
+			&__button {
+				background: #000;
+
+				&::before {
+					rotate: 45deg;
+				}
+
+				&::after {
+					rotate: -45deg;
+				}
+			}
+		}
+	}
+
+	&__num {
+		margin: 0;
+		font-size: clamp(26px, 8vw, 36px);
+		font-weight: 600;
+		color: grey;
+		grid-row: span 2;
+		grid-column: 1;
+	}
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		grid-row: 1;
+		grid-column: 2;
+		cursor: pointer;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: clamp(16px, 5vw, 24px);
+		font-weight: 600;
+	}
+
+	&__button {
+		flex: 0 0 auto;
+		margin: 0;
+		width: clamp(32px, 10vw, 50px);
+		height: clamp(32px, 10vw, 50px);
+		border: none;
+		border-radius: 50%;
+		background: darkgrey;
+		position: relative;
+		transition: scale .4s ease-in-out;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: '';
+			width: 15px;
+			height: 2px;
+			background: #FFFFFF;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			translate: -50% -50%;
+			transition: $transition;
+		}
+
+		&::after {
+			rotate: 90deg;
+		}
+
+		&:hover {
+			scale: 1.1;
+		}
+
+		&:active {
+			transition: all .1s ease-in-out;
+			scale: 1;
+		}
+	}
+
+	&__body {
+		grid-row: 2;
+		grid-column: 2;
+		margin-top: clamp(24px, 6vw, 30px);
+		@media screen and (min-width: 800px) {
+			padding-right: 70px;
+		}
+	}
+
+	&__content {
+		margin: 0;
+		font-size: clamp(14px, 4.3vw, 16px);
+		font-weight: 300;
+		color: dimgrey;
+	}
+}

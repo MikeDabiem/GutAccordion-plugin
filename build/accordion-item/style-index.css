@@ -1,0 +1,100 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/accordion-item/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+.gutaccordion {
+  padding: clamp(16px, 5vw, 60px);
+  background: #FFFFFF;
+}
+@media screen and (min-width: 375px) {
+  .gutaccordion {
+    display: grid;
+    grid-template-columns: 50px auto;
+    -moz-column-gap: clamp(36px, 4.5vw, 60px);
+         column-gap: clamp(36px, 4.5vw, 60px);
+  }
+}
+.gutaccordion:not(:first-child) {
+  margin-top: 5px;
+}
+.gutaccordion.active .gutaccordion__button {
+  background: #000;
+}
+.gutaccordion.active .gutaccordion__button::before {
+  rotate: 45deg;
+}
+.gutaccordion.active .gutaccordion__button::after {
+  rotate: -45deg;
+}
+.gutaccordion__num {
+  margin: 0;
+  font-size: clamp(26px, 8vw, 36px);
+  font-weight: 600;
+  color: grey;
+  grid-row: span 2;
+  grid-column: 1;
+}
+.gutaccordion__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  grid-row: 1;
+  grid-column: 2;
+  cursor: pointer;
+}
+.gutaccordion__title {
+  margin: 0;
+  font-size: clamp(16px, 5vw, 24px);
+  font-weight: 600;
+}
+.gutaccordion__button {
+  flex: 0 0 auto;
+  margin: 0;
+  width: clamp(32px, 10vw, 50px);
+  height: clamp(32px, 10vw, 50px);
+  border: none;
+  border-radius: 50%;
+  background: darkgrey;
+  position: relative;
+  transition: scale 0.4s ease-in-out;
+  cursor: pointer;
+}
+.gutaccordion__button::before, .gutaccordion__button::after {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition: all 0.4s ease-in-out;
+}
+.gutaccordion__button::after {
+  rotate: 90deg;
+}
+.gutaccordion__button:hover {
+  scale: 1.1;
+}
+.gutaccordion__button:active {
+  transition: all 0.1s ease-in-out;
+  scale: 1;
+}
+.gutaccordion__body {
+  grid-row: 2;
+  grid-column: 2;
+  margin-top: clamp(24px, 6vw, 30px);
+}
+@media screen and (min-width: 800px) {
+  .gutaccordion__body {
+    padding-right: 70px;
+  }
+}
+.gutaccordion__content {
+  margin: 0;
+  font-size: clamp(14px, 4.3vw, 16px);
+  font-weight: 300;
+  color: dimgrey;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
