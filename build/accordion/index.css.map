@@ -1,1 +1,0 @@
-{"version":3,"file":"accordion/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://gutaccordion/./src/accordion/editor.scss"],"sourcesContent":[".gutaccordion__body {\n\theight: 100%;\n}\n"],"names":[],"sourceRoot":""}
